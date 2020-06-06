@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Aliexpress address filler
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      1.0
 // @description  try to take over the world!
 // @author       Andronio
 // @homepage     https://github.com/Andronio2/Aliexpress-address-filler
