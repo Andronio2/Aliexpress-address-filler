@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Aliexpress address filler
 // @namespace    http://tampermonkey.net/
-// @version      2.0
+// @version      2.1
 // @description  Заполняет поля адресных данных на Алиэкспресс
 // @author       Andronio
 // @homepage     https://github.com/Andronio2/Aliexpress-address-filler
@@ -133,7 +133,7 @@ let delayStep   = 200; //ms
 				phone.dispatchEvent(new Event('change', {bubbles: true}));
 				phone.dispatchEvent(new Event('input', {bubbles: true}));
 
-				let currCountry = document.querySelector('.fuck_country .next-select .country-name');
+				let currCountry = document.querySelector('.list_country .next-select .country-name');
 				if (currCountry.innerText != tempCountry) {
 					currCountry.click();
 					currMode = 1;
@@ -142,7 +142,7 @@ let delayStep   = 200; //ms
                 return setTimeout(fillAddrFunc, 200);
                 break;
 			case 1: //Ждем списка стран, выбираем страну
-				let allCountry = document.querySelectorAll('.fuck_country .next-overlay-wrapper .country-name');
+				let allCountry = document.querySelectorAll('.list_country .next-overlay-wrapper .country-name');
 				if (allCountry.length == 0) return setTimeout(fillAddrFunc, 200);
 				for (let i = 0; i < allCountry.length; i++) {
 					if (allCountry[i].innerText == tempCountry) {
